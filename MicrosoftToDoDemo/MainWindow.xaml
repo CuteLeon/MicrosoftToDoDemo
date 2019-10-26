@@ -55,11 +55,15 @@
         </Grid>
 
         <Grid Grid.Row="0" Grid.Column="1" Background="CornflowerBlue">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="159*"/>
-                <ColumnDefinition Width="361*"/>
-            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32"></RowDefinition>
+            </Grid.RowDefinitions>
 
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Background="Transparent" BorderThickness="0" Width="45" Height="32" Foreground="White" Content="—"></Button>
+                <Button Background="Transparent" BorderThickness="0" Width="45" Height="32" Foreground="White" Content="□"></Button>
+                <Button Background="Transparent" BorderThickness="0" Width="45" Height="32" Foreground="White" Content="✖"></Button>
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>
