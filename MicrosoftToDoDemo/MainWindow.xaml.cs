@@ -23,6 +23,9 @@ namespace MicrosoftToDoDemo
         public MainWindow()
         {
             InitializeComponent();
+
+            // 鼠标左键拖动
+            this.MouseLeftButtonDown += (sender, e) => this.DragMove();
         }
     }
 }
