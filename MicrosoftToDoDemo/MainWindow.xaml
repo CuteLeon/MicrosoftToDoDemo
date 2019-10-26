@@ -4,9 +4,63 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MicrosoftToDoDemo"
+        xmlns:sys="clr-namespace:System;assembly=System.Runtime"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Microsoft To Do" Height="450" Width="800" 
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        ResizeMode="CanResizeWithGrip">
+    <!-- WindowStartupLocation：屏幕居中显示 -->
+    <!-- WindowStyle：无边框 -->
+    <!-- AllowsTransparency：全透明（失去鼠标在四个边框调整大小功能） -->
+    <!-- ResizeMode：鼠标在界面右下角拖拽调整界面大小 -->
 
+    <Window.Resources>
+        <!-- 定义资源资源：
+            StaticResource: 静态引用资源，仅在初始化时读取一次资源
+            DynamicResource: 动态引用资源，当资源变化时，引用处也会自动更新以使用新的资源
+        -->
+        <ResourceDictionary>
+            <!-- 使用基础类型的资源，需要引入 System 命名空间 -->
+            <sys:String x:Key="Title">Microsoft To Do</sys:String>
+            <sys:String x:Key="UserName">Leon</sys:String>
+            <ImageBrush x:Key="AvaterBrush" ImageSource="/Images/Dream_x280.jpg"></ImageBrush>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280"/>
+            <ColumnDefinition Width="*"/>
+            <!-- With：
+                Auto: 向内容靠拢；
+                {null}: 填充剩余空间
+                {n}*: *为剩余空间被均分的最小单位，取n份最小单位
+            -->
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0" Background="#fbfcfe">
+            <StackPanel>
+                <TextBlock FontSize="14" Foreground="DimGray" Text="{DynamicResource Title}" Margin="13"></TextBlock>
+
+                <DockPanel Height="30" Margin="10">
+                    <Ellipse Width="30" Height="30" DockPanel.Dock="Left" Fill="{DynamicResource AvaterBrush}">
+                    </Ellipse>
+                    <!-- 使用特殊字体和编码显示图标 -->
+                    <TextBlock Width="30" DockPanel.Dock="Right" VerticalAlignment="Center" Foreground="DimGray" FontSize="20" Text="&#xe64b;" FontFamily="./Fonts/#iconfont"></TextBlock>
+                    <TextBlock VerticalAlignment="Center" FontSize="14" Padding="10" Text="{DynamicResource UserName}"></TextBlock>
+                </DockPanel>
+
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="1" Background="CornflowerBlue">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="159*"/>
+                <ColumnDefinition Width="361*"/>
+            </Grid.ColumnDefinitions>
+
+        </Grid>
     </Grid>
 </Window>

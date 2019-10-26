@@ -6,4 +6,9 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Resource Include="Fonts\iconfont.ttf"/>
+    <Resource Include="Images\Dream_x280.jpg" />
+  </ItemGroup>
+
 </Project>
