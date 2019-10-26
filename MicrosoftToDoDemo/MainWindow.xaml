@@ -45,10 +45,9 @@
                 <TextBlock FontSize="14" Foreground="DimGray" Text="{DynamicResource Title}" Margin="13"></TextBlock>
 
                 <DockPanel Height="30" Margin="10">
-                    <Ellipse Width="30" Height="30" DockPanel.Dock="Left" Fill="{DynamicResource AvaterBrush}">
-                    </Ellipse>
+                    <Ellipse Width="30" Height="30" DockPanel.Dock="Left" Fill="{DynamicResource AvaterBrush}"/>
                     <!-- 使用特殊字体和编码显示图标 -->
-                    <TextBlock Width="30" DockPanel.Dock="Right" VerticalAlignment="Center" Foreground="DimGray" FontSize="20" Text="&#xe64b;" FontFamily="./Fonts/#iconfont"></TextBlock>
+                    <TextBlock Width="30" DockPanel.Dock="Right" VerticalAlignment="Center" Foreground="DimGray" FontSize="20" Text="&#xe64b;" FontFamily="./Fonts/iconfont.ttf"></TextBlock>
                     <TextBlock VerticalAlignment="Center" FontSize="14" Padding="10" Text="{DynamicResource UserName}"></TextBlock>
                 </DockPanel>
 
